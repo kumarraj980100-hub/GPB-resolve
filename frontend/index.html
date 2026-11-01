@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Report campus problems at GP Banka, track progress, and get them resolved with GPB-Resolve." />
+    <meta name="robots" content="index,follow" />
+    <title>GPB-Resolve | Report It. Track It. Resolve It.</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/images/gpb-campus.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar home-header">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html" aria-label="GPB-Resolve home">
+          <span class="brand-mark">G</span>
+          <span class="home-brand-copy">GPB-Resolve<small>GP Banka Campus Portal</small></span>
+        </a>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="home-navigation" aria-label="Main navigation">
+          <ul>
+            <li><a data-path="frontend/index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li class="home-nav-auth"><a data-path="frontend/login.html">Login</a></li>
+            <li class="home-nav-auth"><a class="btn btn-primary" data-path="frontend/register.html">Register</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero home-hero">
+        <div class="home-hero-photo" role="img" aria-label="GP Banka college campus"></div>
+        <div class="container home-hero-grid">
+          <div class="home-hero-copy">
+            <span class="home-kicker"><span class="home-kicker-dot"></span> GP Banka · Bihar</span>
+            <h1>Your College.<br />Your Voice.<br /><span>Better Tomorrow.</span></h1>
+            <p>Report a campus problem, follow every update, and help make GP Banka a better place to learn.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" data-path="frontend/register.html">Report a Problem <span aria-hidden="true">→</span></a>
+              <a class="btn home-btn-outline" data-path="frontend/login.html">Track a Complaint</a>
+            </div>
+            <div class="home-hero-benefits" aria-label="Portal benefits">
+              <span><b aria-hidden="true">✓</b> Easy reporting</span>
+              <span><b aria-hidden="true">✓</b> Real-time tracking</span>
+              <span><b aria-hidden="true">✓</b> Better campus</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container home-section home-benefits" id="about">
+        <div class="home-section-heading">
+          <span class="home-eyebrow">A better way to be heard</span>
+          <h2>Campus support, made simple</h2>
+          <p>One trusted place to report concerns and see what happens next.</p>
+        </div>
+        <div class="home-benefit-grid">
+          <article class="home-benefit-card"><span class="home-icon home-icon-teal" aria-hidden="true">↗</span><h3>Easy to Use</h3><p>Submit a concern with a few clear steps, right from your phone or computer.</p></article>
+          <article class="home-benefit-card"><span class="home-icon home-icon-blue" aria-hidden="true">◎</span><h3>Transparent Process</h3><p>Follow status changes and updates from submission through resolution.</p></article>
+          <article class="home-benefit-card"><span class="home-icon home-icon-purple" aria-hidden="true">⌘</span><h3>Better Collaboration</h3><p>Help campus teams understand the issue and coordinate a response.</p></article>
+          <article class="home-benefit-card"><span class="home-icon home-icon-green" aria-hidden="true">▥</span><h3>Data Driven</h3><p>Real complaint trends help administrators identify what needs attention.</p></article>
+        </div>
+      </section>
+
+      <section class="home-category-section" id="categories">
+        <div class="container home-section">
+          <div class="home-section-heading">
+            <span class="home-eyebrow">We are here to help</span>
+            <h2>What would you like to report?</h2>
+            <p>Choose a category to start a report. You can add more details in the complaint form.</p>
+          </div>
+          <div id="home-categories" class="home-category-grid" aria-live="polite">
+            <p class="home-category-loading">Loading complaint categories…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container home-section" id="how-it-works">
+        <div class="home-section-heading">
+          <span class="home-eyebrow">From report to resolution</span>
+          <h2>How GPB-Resolve works</h2>
+          <p>Stay informed at every step of the process.</p>
+        </div>
+        <ol class="home-steps">
+          <li><span>01</span><h3>Register or log in</h3><p>Access your student account securely.</p></li>
+          <li><span>02</span><h3>Submit a complaint</h3><p>Describe the issue and where it happened.</p></li>
+          <li><span>03</span><h3>Track progress</h3><p>Check the latest status and updates.</p></li>
+          <li><span>04</span><h3>Team takes action</h3><p>Administrators review and route the report.</p></li>
+          <li><span>05</span><h3>Issue resolved</h3><p>See the response and resolution details.</p></li>
+        </ol>
+      </section>
+
+      <section class="home-impact-section" aria-labelledby="home-impact-title">
+        <div class="container home-section home-impact">
+          <div class="home-section-heading home-impact-heading">
+            <span class="home-eyebrow">Campus impact</span>
+            <h2 id="home-impact-title">Every report helps us improve</h2>
+            <p>Live totals from complaints submitted through GPB-Resolve.</p>
+          </div>
+          <div id="home-statistics" class="home-stat-grid" aria-live="polite">
+            <div class="home-stat"><strong>—</strong><span>Total reports</span></div>
+            <div class="home-stat"><strong>—</strong><span>Pending</span></div>
+            <div class="home-stat"><strong>—</strong><span>In progress</span></div>
+            <div class="home-stat"><strong>—</strong><span>Resolved</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container home-section home-faq" id="faq">
+        <div class="home-section-heading">
+          <span class="home-eyebrow">Quick answers</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <details><summary>Who can submit a complaint?</summary><p>Registered student accounts can submit and track campus complaints.</p></details>
+        <details><summary>Can I follow my complaint after submitting it?</summary><p>Yes. Sign in to see its status, updates, and any resolution information.</p></details>
+        <details><summary>Can I include a picture?</summary><p>Yes. The complaint form accepts an optional supporting image.</p></details>
+      </section>
+    </main>
+    <footer class="home-footer">
+      <div class="container home-footer-grid">
+        <div class="home-footer-brand">
+          <a class="brand" data-path="frontend/index.html"><span class="brand-mark">G</span><span>GPB-Resolve</span></a>
+          <p>College Problem Reporting and Resolution Management System</p>
+          <span>Report It. Track It. Resolve It.</span>
+        </div>
+        <div><h2>Quick links</h2><a href="#about">About</a><a href="#categories">Categories</a><a href="#how-it-works">How it works</a><a data-path="frontend/login.html">Student login</a></div>
+        <div><h2>Campus</h2><p>GP Banka, Bihar</p><p>Helping our campus community move forward.</p><a data-path="frontend/privacy-policy.html">Privacy Policy</a><a data-path="frontend/terms.html">Terms and Conditions</a></div>
+      </div>
+      <div class="container home-footer-bottom"><span>© <span id="home-copyright-year"></span> GPB-Resolve</span><span>Built for the GP Banka campus community</span></div>
+    </footer>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

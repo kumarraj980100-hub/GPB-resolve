@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private GPB-Resolve administrator dashboard." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin dashboard | GPB-Resolve</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="admin-dashboard" data-required-role="admin">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"
+          ><span class="brand-mark">G</span><span>GPB-Resolve</span></a
+        >
+        <nav>
+          <ul>
+            <li><a data-path="frontend/admin/dashboard.html">Dashboard</a></li>
+            <li>
+              <a data-path="frontend/admin/complaints.html">Complaints</a>
+            </li>
+            <li>
+              <a data-path="frontend/admin/categories.html">Categories</a>
+            </li>
+            <li>
+              <a data-path="frontend/admin/departments.html">Departments</a>
+            </li>
+            <li><a data-path="frontend/admin/users.html">Users</a></li>
+            <li><a data-path="frontend/admin/reports.html">Reports</a></li>
+            <li><a data-logout>Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-top: 2rem">
+      <h1>Administration dashboard</h1>
+      <div id="admin-stats" class="summary-grid"></div>
+      <section id="pending-approvals" style="margin-top: 2rem"></section>
+      <section style="margin-top: 2rem">
+        <h2>Recent complaints</h2>
+        <div id="recent-complaints"></div>
+      </section>
+    </main>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private list of the signed-in student's GPB-Resolve complaints." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>My complaints | GPB-Resolve</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="student-complaints" data-required-role="student">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"
+          ><span class="brand-mark">G</span><span>GPB-Resolve</span></a
+        >
+        <nav>
+          <ul>
+            <li>
+              <a data-path="frontend/student/dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/complaints.html">My complaints</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/notifications.html"
+                >Notifications</a
+              >
+            </li>
+            <li><a data-path="frontend/student/profile.html">Profile</a></li>
+            <li><a data-logout>Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-top: 2rem">
+      <div class="page-heading">
+        <div>
+          <a class="btn btn-outline" data-path="frontend/student/dashboard.html">← Back to dashboard</a>
+          <h1>My complaints</h1>
+        </div>
+        <a class="btn btn-primary" data-path="frontend/student/create-complaint.html">New complaint</a>
+      </div>
+      <div id="complaints-content"></div>
+    </main>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

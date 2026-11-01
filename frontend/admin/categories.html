@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private complaint category administration for GPB-Resolve." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Categories | GPB-Resolve</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="admin-categories" data-required-role="admin">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"
+          ><span class="brand-mark">G</span><span>GPB-Resolve</span></a
+        >
+        <nav>
+          <ul>
+            <li><a data-path="frontend/admin/dashboard.html">Dashboard</a></li>
+            <li>
+              <a data-path="frontend/admin/complaints.html">Complaints</a>
+            </li>
+            <li>
+              <a data-path="frontend/admin/departments.html">Departments</a>
+            </li>
+            <li><a data-logout>Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-top: 2rem">
+      <p><a class="btn btn-outline" data-path="frontend/admin/dashboard.html">← Back to dashboard</a></p>
+      <h1>Complaint categories</h1>
+      <div class="form-card">
+        <div id="form-notice" class="notice" hidden></div>
+        <form id="category-form">
+          <input type="hidden" name="csrf_token" /><label for="name"
+            >Category name</label
+          ><input id="name" name="name" required /><label for="description"
+            >Description</label
+          ><textarea id="description" name="description"></textarea
+          ><button class="btn btn-primary" type="submit">Add category</button>
+        </form>
+      </div>
+      <div id="categories-content" style="margin-top: 2rem"></div>
+    </main>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

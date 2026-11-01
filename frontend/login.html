@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sign in securely to GPB-Resolve to report or manage campus concerns." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Login | GPB-Resolve</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="login">
+    <main class="container auth-wrap">
+      <div class="auth-card">
+        <aside class="auth-intro">
+          <a class="brand" data-path="frontend/index.html">
+            <span class="brand-mark">G</span><span>GPB-Resolve</span>
+          </a>
+          <div>
+            <span class="stat-chip">Campus support, in one place</span>
+            <h2>Make your voice count.</h2>
+            <p>Report a concern, follow its progress, and stay informed until it is resolved.</p>
+            <ul>
+              <li>Secure account access</li>
+              <li>Track complaint updates</li>
+              <li>Connect with campus teams</li>
+            </ul>
+          </div>
+        </aside>
+        <section class="auth-form-panel">
+          <h1>Welcome back</h1>
+          <p>Sign in to continue to GPB-Resolve.</p>
+          <div id="form-notice" class="notice" hidden></div>
+          <div class="form-grid auth-role-switch">
+            <a class="btn btn-secondary" data-path="frontend/login.html?role=student">Student login</a>
+            <a class="btn btn-primary" data-path="frontend/login.html?role=admin">Admin login</a>
+          </div>
+          <form id="login-form">
+            <input type="hidden" name="role" />
+            <input type="hidden" name="csrf_token" />
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+            <div id="otp-field" hidden>
+              <label for="otp_code">Email verification code</label>
+              <input id="otp_code" name="otp_code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" />
+            </div>
+            <button class="btn btn-primary" type="submit">Continue</button>
+          </form>
+          <div class="auth-links">
+            <p>New to GPB-Resolve? <a data-path="frontend/register.html">Create an account</a></p>
+            <p><a data-path="frontend/index.html">Back to homepage</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

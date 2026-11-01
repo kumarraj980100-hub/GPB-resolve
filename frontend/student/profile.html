@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private profile settings for the signed-in GPB-Resolve student." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Profile | GPB-Resolve</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="student-profile" data-required-role="student">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"
+          ><span class="brand-mark">G</span><span>GPB-Resolve</span></a
+        >
+        <nav>
+          <ul>
+            <li>
+              <a data-path="frontend/student/dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/complaints.html">My complaints</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/notifications.html"
+                >Notifications</a
+              >
+            </li>
+            <li><a data-logout>Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-top: 2rem; max-width: 700px">
+      <p><a class="btn btn-outline" data-path="frontend/student/dashboard.html">← Back to dashboard</a></p>
+      <div class="form-card">
+        <h1>My profile</h1>
+        <div id="form-notice" class="notice" hidden></div>
+        <form id="profile-form">
+          <input type="hidden" name="csrf_token" /><label for="full_name"
+            >Full name</label
+          ><input id="full_name" name="full_name" required /><label for="email"
+            >Email</label
+          ><input id="email" name="email" type="email" required /><label
+            for="student_identifier"
+            >Student ID / Roll number</label
+          ><input id="student_identifier" name="student_identifier" /><button
+            class="btn btn-primary"
+            type="submit"
+          >
+            Save profile
+          </button>
+        </form>
+      </div>
+    </main>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

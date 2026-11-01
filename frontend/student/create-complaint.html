@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Private GPB-Resolve complaint submission form for signed-in students." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>New complaint | GPB-Resolve</title>
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body data-page="student-create-complaint" data-required-role="student">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"
+          ><span class="brand-mark">G</span><span>GPB-Resolve</span></a
+        >
+        <nav>
+          <ul>
+            <li>
+              <a data-path="frontend/student/dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/complaints.html">My complaints</a>
+            </li>
+            <li>
+              <a data-path="frontend/student/notifications.html"
+                >Notifications</a
+              >
+            </li>
+            <li><a data-logout>Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" style="padding-top: 2rem; max-width: 760px">
+      <div class="form-card">
+        <h1>Report a problem</h1>
+        <div id="form-notice" class="notice" hidden></div>
+        <form id="complaint-form" enctype="multipart/form-data">
+          <input type="hidden" name="csrf_token" /><label for="title"
+            >Complaint title</label
+          ><input id="title" name="title" maxlength="120" required />
+          <div class="form-grid">
+            <div>
+              <label for="category_id">Category</label
+              ><select id="category_id" name="category_id" required>
+                <option value="">Loading categories...</option>
+              </select>
+            </div>
+            <div>
+              <label for="priority">Priority</label
+              ><select id="priority" name="priority">
+                <option>Low</option>
+                <option selected>Medium</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+            </div>
+          </div>
+          <label for="location">Location / room number</label
+          ><input id="location" name="location" required /><label
+            for="description"
+            >Detailed description</label
+          ><textarea
+            id="description"
+            name="description"
+            maxlength="2000"
+            required
+          ></textarea
+          ><label for="image">Supporting image (optional)</label
+          ><input
+            id="image"
+            name="image"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+          />
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">
+              Submit complaint</button
+            ><a
+              class="btn btn-outline"
+              data-path="frontend/student/dashboard.html"
+              >Cancel</a
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="../assets/js/app.js" defer></script>
+  </body>
+</html>

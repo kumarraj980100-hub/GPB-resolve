@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create a GPB-Resolve account to report and track campus concerns at GP Banka." />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Register | GPB-Resolve</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="register">
+    <main class="container auth-wrap">
+      <div class="auth-card">
+        <aside class="auth-intro">
+          <a class="brand" data-path="frontend/index.html">
+            <span class="brand-mark">G</span><span>GPB-Resolve</span>
+          </a>
+          <div>
+            <span class="stat-chip">Welcome to GP Banka</span>
+            <h2>A campus that listens.</h2>
+            <p>Create your account to raise concerns and keep up with every response.</p>
+            <ul>
+              <li>Simple complaint reporting</li>
+              <li>Clear progress updates</li>
+              <li>Support from the right team</li>
+            </ul>
+          </div>
+        </aside>
+        <section class="auth-form-panel">
+          <h1 id="register-title">Create your account</h1>
+          <p id="register-description">Register to submit complaints and track your case status.</p>
+          <div id="form-notice" class="notice" hidden></div>
+          <div class="form-grid auth-role-switch">
+            <a class="btn btn-secondary" data-path="frontend/register.html?role=student">Student registration</a>
+            <a class="btn btn-primary" data-path="frontend/register.html?role=admin">Admin registration</a>
+          </div>
+          <form id="register-form">
+            <input type="hidden" name="role" />
+            <input type="hidden" name="csrf_token" />
+            <label for="full_name">Full name</label>
+            <input id="full_name" name="full_name" autocomplete="name" placeholder="Your full name" required />
+            <div id="student-identifier-field">
+              <label for="student_identifier">Student ID / Roll number</label>
+              <input id="student_identifier" name="student_identifier" autocomplete="off" placeholder="Your student ID" />
+            </div>
+            <div id="phone-number-field">
+              <label for="phone_number">Phone number</label>
+              <input id="phone_number" name="phone_number" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" required />
+            </div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" minlength="8" autocomplete="new-password" placeholder="At least 8 characters" required />
+            <label for="confirm_password">Confirm password</label>
+            <input id="confirm_password" name="confirm_password" type="password" minlength="8" autocomplete="new-password" placeholder="Re-enter your password" required />
+            <div id="otp-field" hidden>
+              <label for="otp_code">Email verification code</label>
+              <input id="otp_code" name="otp_code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" />
+            </div>
+            <button class="btn btn-primary" type="submit">Create account</button>
+          </form>
+          <div class="auth-links">
+            <p>Already registered? <a data-path="frontend/login.html">Sign in</a></p>
+            <p>By registering, you acknowledge the <a data-path="frontend/privacy-policy.html">Privacy Policy</a> and <a data-path="frontend/terms.html">Terms and Conditions</a>.</p>
+            <p><a data-path="frontend/index.html">Back to homepage</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

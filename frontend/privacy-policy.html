@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Learn what information GPB-Resolve collects, how it is used to manage campus complaints, and how to request a correction." />
+    <meta name="robots" content="index,follow" />
+    <title>Privacy Policy | GPB-Resolve</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="legal">
+    <header class="topbar home-header">
+      <div class="container topbar-inner">
+        <a class="brand" data-path="frontend/index.html"><span class="brand-mark">G</span><span class="home-brand-copy">GPB-Resolve<small>GP Banka Campus Portal</small></span></a>
+        <nav aria-label="Main navigation"><ul>
+          <li><a data-path="frontend/index.html">Home</a></li>
+          <li><a data-path="frontend/terms.html">Terms</a></li>
+          <li><a data-path="frontend/login.html">Login</a></li>
+        </ul></nav>
+      </div>
+    </header>
+    <main class="container legal-page">
+      <a class="btn btn-outline" data-path="frontend/index.html">← Back to home</a>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: October 13, 2026</p>
+      <p>This policy describes how the GPB-Resolve college problem reporting and resolution system handles information when you use this application.</p>
+
+      <h2>Information the application collects</h2>
+      <ul>
+        <li>Account details provided during registration, including name, email address, phone number, and (for students) student ID or roll number.</li>
+        <li>Complaint information, including title, category, description, location, priority, status history, and any image you choose to attach.</li>
+        <li>Authentication and operational data needed to protect the service, such as session identifiers, CSRF tokens, email verification codes, and complaint timestamps.</li>
+      </ul>
+
+      <h2>Why information is used</h2>
+      <p>Account information is used to create and secure accounts, verify email addresses, and associate complaints with their submitter. Complaint information is used to review, route, update, and resolve campus reports. Phone numbers are collected on registration forms; how administrators use them should be confirmed by the site owner.</p>
+
+      <h2>Who can access complaint information</h2>
+      <p>A student can view their own complaints and attached images after signing in. Authenticated administrators can review complaint details, submitter details, images, and status updates to manage the report. The application enforces these checks on the server. Do not include sensitive information that is not needed to address a campus issue.</p>
+
+      <h2>Storage and protection</h2>
+      <p>Account and complaint records are stored in the configured MySQL/MariaDB database (with a local SQLite fallback when configured). Complaint images are stored as files on the application server, with file metadata in the database. The application uses password hashing, session cookies, CSRF checks for state-changing actions, and server-side authorization. These measures reduce risk but cannot guarantee that data is completely secure.</p>
+
+      <h2>Email, cookies, analytics, and external services</h2>
+      <p>The application uses an essential session cookie to maintain sign-in and CSRF state. It does not currently display a cookie-consent banner or load an analytics provider. When SMTP is configured, an external mail provider may deliver one-time verification codes; the provider depends on the server configuration. No analytics or advertising cookies are configured in the current frontend.</p>
+
+      <h2>Retention, sharing, correction, and deletion</h2>
+      <p>Complaint and account records remain in the configured database until an administrator or database operator removes them. The application does not currently define an automatic retention period or a self-service account deletion process. Information is made available to authorized application administrators for complaint handling; any additional sharing or export practices must be confirmed by the site owner.</p>
+      <p>To request a correction or ask about deletion, contact the GPB-Resolve site administrator through the contact channel designated by GP Banka. A verified contact address or phone number has not been configured in this application.</p>
+
+      <aside class="legal-owner-note"><strong>Site owner review required:</strong> Confirm the responsible data controller, administrator contact channel, retention/deletion schedule, SMTP provider, and any external data-sharing practices before publishing this policy as final.</aside>
+      <p><a data-path="frontend/terms.html">Read the Terms and Conditions</a></p>
+    </main>
+    <footer class="home-footer"><div class="container home-footer-bottom"><span>© <span id="home-copyright-year"></span> GPB-Resolve</span><span><a data-path="frontend/privacy-policy.html">Privacy Policy</a> · <a data-path="frontend/terms.html">Terms</a></span></div></footer>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>
